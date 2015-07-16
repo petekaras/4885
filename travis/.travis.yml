@@ -10,3 +10,10 @@ after_success:
 after_failure:
   - cat com.codeaffine.module-a/target/surefire-reports/*.txt
   - cat com.codeaffine.module-b/target/surefire-reports/*.txt
+notifications:
+  email:
+    recipients:
+      - peter@peterkaras.com
+      - john@peterkaras.com
+    on_success: change
+    on_failure: always
